@@ -1,3 +1,5 @@
+// WAP to calculate electricity bill 
+//For 1-50 units -30rs  For 51-150 units -40rs/unit  For 151 And Above- 50rs/unit
 #include <stdio.h>
 void main()
 {
@@ -20,4 +22,5 @@ void main()
         rs = units * 50;
         printf("%d", rs);
     }
+
 }
