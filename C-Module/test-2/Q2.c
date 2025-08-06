@@ -1,3 +1,4 @@
+// WAP to check the number is +ve , -ve or Neutral
 #include<stdio.h>
 void main()
 {
@@ -12,3 +13,4 @@ void main()
     else
     printf("Number is Neutral");
 }
+
