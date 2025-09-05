@@ -1,0 +1,93 @@
+🏏 Player Management System
+📌 Project Overview
+
+The Player Management System is a C-based console application designed to efficiently manage cricket player information.
+It allows the user to add, remove, search, update, display, and sort players, as well as display the top 3 players based on runs and wickets.
+
+This system is useful for managing cricket teams in a structured and organized way.
+
+⚙️ Features
+
+➕ Add Player – Add new player details (Jersey No, Name, Runs, Wickets, Matches Played).
+
+➖ Remove Player – Remove a player by their jersey number.
+
+🔍 Search Player – Search player details using jersey number.
+
+✏️ Update Player – Update details of an existing player.
+
+📋 Display All Players – View all stored player details.
+
+📊 Sort Players – Sort players by runs (min/max) or wickets (min/max).
+
+🏆 Top 3 Players – Display the top 3 players based on runs and wickets.
+
+📂 Project Structure
+Player-Management-System/
+│── main.c          # Main source code file
+│── README.md       # Project documentation
+
+🖥️ Technologies Used
+
+Language: C
+
+Compiler: GCC (or any standard C compiler)
+
+Memory Management: Dynamic memory allocation using malloc()
+
+📌 Player Attributes
+
+Each player record contains the following details:
+
+JerseyNo – Unique jersey number of the player
+
+Name – Player’s name
+
+Runs – Total runs scored
+
+Wickets – Total wickets taken
+
+Matches_played – Number of matches played
+
+🚀 How to Run the Project
+
+Clone the repository:
+
+git clone https://github.com/your-username/Player-Management-System.git
+cd Player-Management-System
+
+
+Compile the program:
+
+gcc main.c -o player_management
+
+
+Run the executable:
+
+./player_management
+
+📋 Menu Options
+
+When you run the program, you’ll see:
+
+***** Player Management System *****
+1. Add Player
+2. Remove Player
+3. Search Player
+4. Update Player
+5. Display All Players
+6. Display Sorted Players
+7. Display Top 3 Players (Runs & Wickets)
+8. Exit
+
+🏏 Example Workflow
+
+Add players with details like jersey number, name, runs, wickets, and matches played.
+
+Search for a player by jersey number.
+
+Update or remove a player’s record.
+
+Display all players in sorted order.
+
+View the top 3 players based on runs and wickets.
