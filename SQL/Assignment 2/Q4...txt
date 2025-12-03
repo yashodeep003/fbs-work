@@ -1,0 +1,17 @@
+Q4. Create the table Member again as per the schema description with the
+following constraints.
+a. Member_Id – Primary Key
+b. Membership_type - ‘Lifetime’,’ Annual’, ‘Half Yearly’,’ Quarterly’
+
+------
+
+mysql> create table Member
+    -> (Member_Id int primary key,
+    -> Member_Name varchar(30) ,
+    -> Member_address varchar(50),
+    -> Acc_Open_Date Date ,
+    -> Membership_type enum('Lifetime','Annual','Half Yearly','Quaterly'),
+    -> Fees_Paid int ,
+    -> Max_Books_Allowed int ,
+    -> Penalty_Amount Decimal(7,2) );
+Query OK, 0 rows affected (0.11 sec)

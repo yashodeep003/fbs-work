@@ -1,0 +1,27 @@
+Q16. Create table Books again as per the schema description with the
+following constraints.
+a. Book_No – Primary Key
+b. Book_Name – Not Null
+c. Category – System, Fiction, Database, RDBMS, Others.
+
+----
+
+mysql> create table Books
+    -> (Book_No int primary key ,
+    -> Book_Name varchar(30) not null,
+    -> Author varchar(30),
+    -> Cost Decimal(7,2),
+    -> Category enum('System','Fiction','Database','RDBMS','Others') );
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> desc books;
++-----------+------------------------------------------------------+------+-----+---------+-------+
+| Field     | Type                                                 | Null | Key | Default | Extra |
++-----------+------------------------------------------------------+------+-----+---------+-------+
+| Book_No   | int                                                  | NO   | PRI | NULL    |       |
+| Book_Name | varchar(30)                                          | NO   |     | NULL    |       |
+| Author    | varchar(30)                                          | YES  |     | NULL    |       |
+| Cost      | decimal(7,2)                                         | YES  |     | NULL    |       |
+| Category  | enum('System','Fiction','Database','RDBMS','Others') | YES  |     | NULL    |       |
++-----------+------------------------------------------------------+------+-----+---------+-------+
+5 rows in set (0.01 sec)

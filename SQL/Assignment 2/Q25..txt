@@ -1,0 +1,12 @@
+Q25. Remove the constraints on Issue table
+------
+
+mysql> ALTER TABLE Issue
+    -> DROP FOREIGN KEY issue_ibfk_1;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table issue
+    -> drop foreign key issue_ibfk_2;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0

@@ -1,0 +1,12 @@
+Q14. Add the constraints on columns max_books_allowed and penalty_amt
+as follows
+a. max_books_allowed < 100
+b. penalty_amt maximum 1000
+Also give names to the constraints.
+
+----
+
+mysql> alter table member
+    -> modify column Max_Books_Allowed int check(max_books_allowed<150);
+Query OK, 5 rows affected (0.13 sec)
+Records: 5  Duplicates: 0  Warnings: 0

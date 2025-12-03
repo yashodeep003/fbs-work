@@ -1,0 +1,10 @@
+Q20.  Insert into Book following data.
+
+105, National Geographic, Adis Scott, 1000, Science
+
+
+-----
+
+mysql> insert into books
+    -> values(116,"National Geographic","Adis Scott",1000,'System');
+Query OK, 1 row affected (0.01 sec)

@@ -1,0 +1,8 @@
+Q29. Try to delete the record of member id 1 from member table and
+observe the error .
+
+-------
+
+mysql> delete from member
+    -> where Member_Id=1;
+Query OK, 1 row affected (0.01 sec)

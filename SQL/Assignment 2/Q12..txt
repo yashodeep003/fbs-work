@@ -1,0 +1,17 @@
+Q12.  Try to insert a record with Max_Books_Allowed = 110, Observe the
+error that comes.
+
+------
+mysql> insert into member
+    -> (Max_Books_allowed)
+    -> values(15);
+ERROR 1364 (HY000): Field 'Member_Id' doesn't have a default value
+
+There is another Method to change value of Max Book Allowed ==>>
+
+mysql> update Member
+    -> set Max_Books_Allowed=110;
+Query OK, 5 rows affected (0.01 sec)
+Rows matched: 5  Changed: 5  Warnings: 0
+
+This Will change All the values of column 

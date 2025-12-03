@@ -1,0 +1,90 @@
+Q30. View the data and structure of all the three tables Member,
+Issue, Book.
+
+----------
+
+
+mysql> desc member;
++-------------------+----------------------------------------------------+------+-----+---------+-------+
+| Field             | Type                                               | Null | Key | Default | Extra |
++-------------------+----------------------------------------------------+------+-----+---------+-------+
+| Member_Id         | int                                                | NO   | PRI | NULL    |       |
+| Member_Name       | varchar(20)                                        | YES  |     | NULL    |       |
+| Member_address    | varchar(50)                                        | YES  |     | NULL    |       |
+| Acc_Open_Date     | date                                               | YES  |     | NULL    |       |
+| Membership_type   | enum('Lifetime','Annual','Half Yearly','Quaterly') | YES  |     | NULL    |       |
+| Fees_Paid         | int                                                | YES  |     | NULL    |       |
+| Max_Books_Allowed | int                                                | YES  |     | NULL    |       |
+| Penalty_Amount    | decimal(7,2)                                       | YES  |     | NULL    |       |
++-------------------+----------------------------------------------------+------+-----+---------+-------+
+8 rows in set (0.01 sec)
+
+mysql> desc books;
++-----------+------------------------------------------------------+------+-----+---------+-------+
+| Field     | Type                                                 | Null | Key | Default | Extra |
++-----------+------------------------------------------------------+------+-----+---------+-------+
+| Book_No   | int                                                  | NO   | PRI | NULL    |       |
+| Book_Name | varchar(30)                                          | NO   |     | NULL    |       |
+| Author    | varchar(30)                                          | YES  |     | NULL    |       |
+| Cost      | decimal(7,2)                                         | YES  |     | NULL    |       |
+| Category  | enum('System','Fiction','Database','RDBMS','Others') | YES  |     | NULL    |       |
++-----------+------------------------------------------------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> desc issue;
++--------------+------+------+-----+---------+-------+
+| Field        | Type | Null | Key | Default | Extra |
++--------------+------+------+-----+---------+-------+
+| Lib_Issue_Id | int  | NO   | PRI | NULL    |       |
+| Book_No      | int  | YES  | MUL | NULL    |       |
+| Member_Id    | int  | YES  | MUL | NULL    |       |
+| Issue_Date   | date | YES  |     | NULL    |       |
+| Return_Date  | date | YES  |     | NULL    |       |
++--------------+------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> table member;
++-----------+----------------+----------------+---------------+-----------------+-----------+-------------------+----------------+
+| Member_Id | Member_Name    | Member_address | Acc_Open_Date | Membership_type | Fees_Paid | Max_Books_Allowed | Penalty_Amount |
++-----------+----------------+----------------+---------------+-----------------+-----------+-------------------+----------------+
+|         2 | Garima Sen     | Pune           | 2025-09-26    | Annual          |      1000 |               110 |           NULL |
+|         3 | Rohan Patil    | Mumbai         | 2025-09-26    | Quaterly        |       200 |               110 |           0.00 |
+|         4 | Sneha Kulkarni | Pune           | 2025-09-26    | Annual          |      1200 |               110 |           0.00 |
+|         5 | Amit Deshmukh  | Nashik         | 2025-09-26    | Quaterly        |       500 |               110 |          50.00 |
++-----------+----------------+----------------+---------------+-----------------+-----------+-------------------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> table books;
++---------+---------------------------+----------------------+---------+----------+
+| Book_No | Book_Name                 | Author               | Cost    | Category |
++---------+---------------------------+----------------------+---------+----------+
+|     101 | Let us C                  | Denins Ritchie       |  450.00 | System   |
+|     102 | Oracle-Complete Fef       | Loni                 |  550.00 | Database |
+|     103 | Mastring SQL              | Loni                 |  250.00 | Database |
+|     104 | PL SQL - Ref              | Scott Urman          |  750.00 | Database |
+|     105 | Operating System Concepts | Abraham Silberschatz |  750.50 | System   |
+|     106 | Database System Concepts  | Henry Korth          |  680.00 | Database |
+|     107 | Modern RDBMS              | Raghu Ramakrishnan   |  550.75 | RDBMS    |
+|     108 | Harry Potter              | J.K. Rowling         |  400.00 | Fiction  |
+|     109 | The Alchemist             | Paulo Coelho         |  350.00 | Fiction  |
+|     110 | Clean Code                | Robert C. Martin     |  800.00 | System   |
+|     111 | C Programming Language    | Brian Kernighan      |  600.00 | System   |
+|     112 | Sherlock Holmes           | Arthur Conan Doyle   |  500.00 | Fiction  |
+|     113 | Blockchain Basics         | Daniel Drescher      |  720.00 | Others   |
+|     114 | Data Science              | Andrew Park          |  900.00 | Others   |
+|     115 | DSA                       | W3School             |  500.00 | System   |
+|     116 | National Geographic       | Adis Scott           | 1000.00 | System   |
++---------+---------------------------+----------------------+---------+----------+
+16 rows in set (0.00 sec)
+
+mysql> table issue;
++--------------+---------+-----------+------------+-------------+
+| Lib_Issue_Id | Book_No | Member_Id | Issue_Date | Return_Date |
++--------------+---------+-----------+------------+-------------+
+|         7001 |     101 |         1 | 2006-12-10 | NULL        |
+|         7002 |     102 |         2 | 2006-12-25 | NULL        |
+|         7003 |     103 |         1 | 2006-01-15 | NULL        |
+|         7004 |     104 |         1 | 2006-07-04 | NULL        |
+|         7005 |     101 |         2 | 2006-10-15 | NULL        |
++--------------+---------+-----------+------------+-------------+
+5 rows in set (0.00 sec)

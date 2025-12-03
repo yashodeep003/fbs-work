@@ -1,0 +1,37 @@
+Q18.Insert more records in Book table.
+
+-----
+mysql> INSERT INTO Books (Book_No, Book_Name, Author, Cost, Category) VALUES
+    -> (105, 'Operating System Concepts', 'Abraham Silberschatz', 750.50, 'System'),
+    -> (106, 'Database System Concepts', 'Henry Korth', 680.00, 'Database'),
+    -> (107, 'Modern RDBMS', 'Raghu Ramakrishnan', 550.75, 'RDBMS'),
+    -> (108, 'Harry Potter ', 'J.K. Rowling', 400.00, 'Fiction'),
+    -> (109, 'The Alchemist', 'Paulo Coelho', 350.00, 'Fiction'),
+    -> (110, 'Clean Code', 'Robert C. Martin', 800.00, 'System'),
+    -> (111, 'C Programming Language', 'Brian Kernighan', 600.00, 'System'),
+    -> (112, 'Sherlock Holmes', 'Arthur Conan Doyle', 500.00, 'Fiction'),
+    -> (113, 'Blockchain Basics', 'Daniel Drescher', 720.00, 'Others'),
+    -> (114, 'Data Science', 'Andrew Park', 900.00, 'Others');
+Query OK, 10 rows affected (0.01 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> table books;
++---------+---------------------------+----------------------+--------+----------+
+| Book_No | Book_Name                 | Author               | Cost   | Category |
++---------+---------------------------+----------------------+--------+----------+
+|     101 | Let us C                  | Denins Ritchie       | 450.00 | System   |
+|     102 | Oracle-Complete Fef       | Loni                 | 550.00 | Database |
+|     103 | Mastring SQL              | Loni                 | 250.00 | Database |
+|     104 | PL SQL - Ref              | Scott Urman          | 750.00 | Database |
+|     105 | Operating System Concepts | Abraham Silberschatz | 750.50 | System   |
+|     106 | Database System Concepts  | Henry Korth          | 680.00 | Database |
+|     107 | Modern RDBMS              | Raghu Ramakrishnan   | 550.75 | RDBMS    |
+|     108 | Harry Potter              | J.K. Rowling         | 400.00 | Fiction  |
+|     109 | The Alchemist             | Paulo Coelho         | 350.00 | Fiction  |
+|     110 | Clean Code                | Robert C. Martin     | 800.00 | System   |
+|     111 | C Programming Language    | Brian Kernighan      | 600.00 | System   |
+|     112 | Sherlock Holmes           | Arthur Conan Doyle   | 500.00 | Fiction  |
+|     113 | Blockchain Basics         | Daniel Drescher      | 720.00 | Others   |
+|     114 | Data Science              | Andrew Park          | 900.00 | Others   |
++---------+---------------------------+----------------------+--------+----------+
+14 rows in set (0.00 sec)

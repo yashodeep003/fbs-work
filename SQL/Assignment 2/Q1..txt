@@ -1,0 +1,16 @@
+Q1. Create the table Member, Books and Issue without any constraints as
+mentioned in the schema description above.
+
+--
+
+mysql> create table Member
+    -> (Member_Id int,Member_Name varchar(30),Member_address varchar(50),Acc_Open_Date Date,Membership_type varchar(20),Fees_paid int ,Penalty_Amount Decimal(7,2) );
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> create table Books
+    -> (Book_No int ,Book_Name varchar(30),Author_Name varchar(30),Cost Decimal(7,2),Category varchar(10));
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> create table Issue
+    -> (Lib_Issue_Id int , Book_No int , Member_Id int,Issue_Date Date,Return_Date Date );
+Query OK, 0 rows affected (0.04 sec)

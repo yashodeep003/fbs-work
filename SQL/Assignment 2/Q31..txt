@@ -1,0 +1,12 @@
+Q31.  Modify the Return_Date of 7004,7005 to 15 days after the
+Issue_date.
+
+------------
+
+mysql> update issue set return_date ='2006-07-19' where Lib_Issue_Id=7004;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update issue set return_date ='2006-10-30' where Lib_Issue_Id=7005;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0

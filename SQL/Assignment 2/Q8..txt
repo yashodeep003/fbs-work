@@ -1,0 +1,4 @@
+Q8. Rename the table Issue to Lib_Issue.
+-----
+
+mysql> alter table Issue rename to Lib_Issue;

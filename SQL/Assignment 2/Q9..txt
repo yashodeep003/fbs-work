@@ -1,0 +1,22 @@
+Q9.  Insert following data in table Member
+
+------
+
+mysql> insert into member
+    -> (Member_Id,Member_Name,Member_address,Acc_Open_Date,Membership_Type,Fees_Paid,Max_Books_allowed,Penalty_Amount)
+    -> values(1,"Richa Sharma","Pune",'10-12-05',"Lifetime",25000,3,50);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into member
+    -> (Member_Id,Member_Name,Member_address,Acc_Open_Date,Membership_Type,Fees_Paid,Max_Books_allowed)
+    -> values(2,"Garima Sen","Pune",curdate(),"Annual",1000,3);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> table member;
++-----------+--------------+----------------+---------------+-----------------+-----------+-------------------+----------------+
+| Member_Id | Member_Name  | Member_address | Acc_Open_Date | Membership_type | Fees_Paid | Max_Books_Allowed | Penalty_Amount |
++-----------+--------------+----------------+---------------+-----------------+-----------+-------------------+----------------+
+|         1 | Richa Sharma | Pune           | 2010-12-05    | Lifetime        |     25000 |                 3 |          50.00 |
+|         2 | Garima Sen   | Pune           | 2025-09-26    | Annual          |      1000 |                 3 |           NULL |
++-----------+--------------+----------------+---------------+-----------------+-----------+-------------------+----------------+
+2 rows in set (0.01 sec)

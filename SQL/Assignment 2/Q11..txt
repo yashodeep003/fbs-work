@@ -1,0 +1,9 @@
+Q11.  Modify the column Member_name. Decrease the width of the member
+name to 20 characters. (If it does not allow state the reason for that)
+
+-----
+
+mysql> alter table member
+    -> modify column Member_Name varchar(20);
+Query OK, 5 rows affected (0.12 sec)
+Records: 5  Duplicates: 0  Warnings: 0

@@ -1,0 +1,11 @@
+Q17. Insert data in Book table as follows:
+
+------
+
+mysql> insert into books
+    -> values(101,"Let us C","Denins Ritchie",450,'System'),
+    -> (102,"Oracle-Complete Fef","Loni",550,'Database'),
+    -> (103,"Mastring SQL","Loni",250,'Database'),
+    -> (104,"PL SQL - Ref","Scott Urman",750,'Database');
+Query OK, 4 rows affected (0.01 sec)
+Records: 4  Duplicates: 0  Warnings: 0

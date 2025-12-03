@@ -1,0 +1,8 @@
+Q7. Delete/Drop the column Reference from Issue.
+----
+mysql> alter table Issue
+    -> drop column Reference;
+Query OK, 0 rows affected (0.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+							
